@@ -71,8 +71,8 @@ class Model:
     DENSENET_PARAM = { 
         'growth_rate': 12,
         'total_blocks': 3,
-        'depth': 100,
-        'bc_mode': True, 
+        'depth': 40,
+        'bc_mode': False, 
         'reduction': 0.5
     }
 
@@ -384,7 +384,7 @@ def tower(inputs,
           bc_mode,
           reduction,
           is_initialization=False,
-          name=None):
+          name=None):   
     with tf.name_scope(name, "DenseNet"):
         default_conv_args = dict(
             padding='SAME',
