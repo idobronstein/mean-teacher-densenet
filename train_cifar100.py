@@ -15,7 +15,7 @@ from mean_teacher.model import Model
 from mean_teacher import minibatching
 
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(filename='log.txt', filemode='w', level=logging.INFO)
 LOG = logging.getLogger('main')
 
 
