@@ -47,11 +47,11 @@ class Model:
 
         # Architecture hyperparameters
         'input_noise': 0.15,
-        'student_dropout_probability': 0.5,
-        'teacher_dropout_probability': 0.5,
+        'student_dropout_probability': 0.8,
+        'teacher_dropout_probability': 0.8,
 
         # Training schedule
-        'rampup_length': 40000,
+        'rampup_length': 80000,
         'rampdown_length': 25000,
         'training_length': 150000,
 

@@ -27,8 +27,10 @@ def run(data_seed=0):
     model['normalize_input'] = False  # Keep ZCA information
     model['rampdown_length'] = 0
     model['rampup_length'] = 5000
-    model['training_length'] = 40000
+    model['training_length'] = 80000
     model['max_consistency_cost'] = 3000.0
+    model['student_dropout_probability'] = 0.8
+    model['teacher_dropout_probability'] = 0.8
 
     tensorboard_dir = model.save_tensorboard_graph()
     LOG.info("Saved tensorboard graph to %r", tensorboard_dir)
