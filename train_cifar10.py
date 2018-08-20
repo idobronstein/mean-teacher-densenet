@@ -22,7 +22,7 @@ from mean_teacher.model import Model
 from mean_teacher import minibatching
 
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(filename='log.txt', filemode='w', level=logging.INFO)
 LOG = logging.getLogger('main')
 
 
@@ -36,6 +36,8 @@ def run(data_seed=0):
     model['rampup_length'] = 5000
     model['training_length'] = 40000
     model['max_consistency_cost'] = 50.0
+    model['student_dropout_probability'] = 0.8
+    model['teacher_dropout_probability'] = 0.8
 
     tensorboard_dir = model.save_tensorboard_graph()
     LOG.info("Saved tensorboard graph to %r", tensorboard_dir)
