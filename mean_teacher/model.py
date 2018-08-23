@@ -502,7 +502,7 @@ def consistency_costs(logits1, logits2, cons_coefficient, mask, consistency_trus
     """
 
     with tf.name_scope(name, "consistency_costs") as scope:
-        num_classes = 100
+        num_classes = 10
         assert_shape(logits1, [None, num_classes])
         assert_shape(logits2, [None, num_classes])
         assert_shape(cons_coefficient, [])
