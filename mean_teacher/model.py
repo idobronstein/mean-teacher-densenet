@@ -424,7 +424,7 @@ def tower(inputs,
                           lambda: net)
             net = nn.gaussian_noise(net, scale=input_noise, name='gaussian_noise')
 
-            DN = DenseNet(growth_rate, total_blocks, depth, bc_mode, reduction, dropout_probability, is_training, 100)
+            DN = DenseNet(growth_rate, total_blocks, depth, bc_mode, reduction, dropout_probability, is_training, 10)
             primary_logits = DN.build(net)
             secondary_logits = primary_logits
 
